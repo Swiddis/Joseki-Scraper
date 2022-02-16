@@ -3,7 +3,7 @@ A script for scraping the joseki from Go games.
 
 Currently, the script is designed for (and likely only works on) OGS's JSON game dumps. The games can be found in an OGS database dump [here](https://forums.online-go.com/t/can-we-get-an-sgf-database-dump/38837).
 
-The algorithm itself is based on a research paper by Carson Liang, Felix Kanke, and Alfredo Cuzzocrea, titled ["Data analytics on the board game Go for the discovery of interesting sequences of moves in joseki"](https://www.researchgate.net/publication/327289473_Data_analytics_on_the_board_game_Go_for_the_discovery_of_interesting_sequences_of_moves_in_joseki).
+The algorithm itself is based on a research paper by Carson Liang, Felix Kanke, and Alfredo Cuzzocrea, titled ["Data analytics on the board game Go for the discovery of interesting sequences of moves in joseki"](http://dx.doi.org/10.1016/j.procs.2018.08.017).
 
 ## Running the script
 Requires the [tqdm](https://pypi.org/project/tqdm/) progress bar library by default, but this results in no direct functionality change and occurrences of `tqdm` can safely be removed.
