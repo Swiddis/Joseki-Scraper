@@ -58,7 +58,7 @@ def is_joseki(joseki, min_dists, adding_thresholds):
         return False
     return True
 
-def get_joseki(game, initial_threshold=7, adding_thresholds=[(0, 5), (6, 3), (10, 2)]):
+def get_joseki(game, initial_threshold=7, adding_thresholds=[(0, 6), (6, 4), (10, 3)]):
     joseki = setup_joseki(game, initial_threshold)
     for move in game["moves"][4:]:
         min_dists = [min((chebychev_distance(m, move) for m in j), default=100) for j in joseki]
@@ -212,8 +212,7 @@ if __name__ == "__main__":
     save_file(json.dumps(tree), "./raw_tree.json")
     print("Pruning joseki")
     tree = read_file("./raw_tree.json")
-    print("(read)")
-    tree = prune_joseki_tree(tree, 1000)
+    tree = prune_joseki_tree(tree, len(games) / 100)
     save_file(json.dumps(tree), "./tree.json")
     print("Outputting")
     tree = read_file("./tree.json")
