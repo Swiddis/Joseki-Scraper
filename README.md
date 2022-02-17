@@ -13,3 +13,4 @@ At the bottom of the included python file, configure the script to take input fr
 ## To-do:
 - Handle more types of input, most notably SGF input.
 - Improve joseki detection algorithm.
+- Symmetry handling--in particular, the algorithm distinguishes between the two directions in the double approach joseki, messing up frequencies.
